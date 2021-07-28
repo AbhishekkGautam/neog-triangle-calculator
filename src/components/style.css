@@ -1,0 +1,121 @@
+:root {
+  --primary-color: #bd3f0d;
+  --secondary-color: #9a3412;
+  --light-green: #fff7eb;
+  --dark-green: #7c2d12;
+  --output-color: #fff1df;
+}
+
+.is-triangle-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.is-triangle-div input {
+  margin: 0rem 1rem;
+  width: 100px;
+  padding: 0.6rem;
+  font-family: "DM Sans", sans-serif;
+  border: 1px solid var(--dark-green);
+}
+
+.is-triangle-div .button {
+  font-size: 13.3px;
+  width: 235px;
+  color: white;
+  padding: 0.6rem 2rem;
+  background-color: var(--primary-color);
+  border-radius: 0.3rem;
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Find The Third Angle */
+.third-angle-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.third-angle-div input {
+  margin: 0rem 1rem;
+  width: 40%;
+  padding: 0.6rem;
+  font-family: "DM Sans", sans-serif;
+  border: 1px solid var(--dark-green);
+}
+
+.button-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.button-div .check-button {
+  font-size: 13.3px;
+  width: 180px;
+  color: white;
+  padding: 0.6rem 2rem;
+  background-color: var(--primary-color);
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+.button-div .play-again-button {
+  font-size: 13.3px;
+  width: 180px;
+  color: var(--primary-color);
+  padding: 0.6rem 2rem;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  border: 1px solid var(--dark-green);
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+.is-triangle-div .button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.button-div .check-button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.given-angle-div {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 13px;
+}
+
+.given-angle-div span {
+  margin: 0rem 0.5rem;
+  background-color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+@media only screen and (max-width: 520px) {
+  .is-triangle-div input {
+    margin: 0rem 0.5rem;
+    width: 50px;
+  }
+  .button-div .play-again-button {
+    margin-top: 1rem;
+    width: 235px;
+  }
+  .button-div .check-button {
+    width: 235px;
+  }
+}
