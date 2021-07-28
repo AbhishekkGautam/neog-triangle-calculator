@@ -37,7 +37,9 @@ const CalculateHypotenuse = forwardRef(({ isShow }, hypotenuseRef) => {
 
   return (
     <div style={{ display: `${isShow}` }}>
-      <p>Enter base & height of right angle triangle.</p>
+      <p style={{ textAlign: "center" }}>
+        Enter base & height of right angle triangle.
+      </p>
       <form className="is-triangle-div" onSubmit={checkBtnHandler}>
         <input
           onChange={inputOneHandler}
@@ -57,17 +59,7 @@ const CalculateHypotenuse = forwardRef(({ isShow }, hypotenuseRef) => {
           Calculate
         </button>
       </form>
-      <div
-        style={{
-          textAlign: "center",
-          marginTop: "3rem",
-          marginBottom: "1.5rem",
-          padding: "0rem 2rem",
-          fontSize: "1rem",
-        }}
-      >
-        {output}
-      </div>
+      <div className="output-result">{output}</div>
     </div>
   );
 });

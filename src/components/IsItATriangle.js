@@ -42,7 +42,7 @@ const IsItATriangle = forwardRef(({ isShow }, isTriangleRef) => {
 
   return (
     <div style={{ display: `${isShow}` }}>
-      <p>
+      <p style={{ textAlign: "center" }}>
         Enter the angles and check to see if those angles can make a triangle or
         not.
       </p>
@@ -72,16 +72,7 @@ const IsItATriangle = forwardRef(({ isShow }, isTriangleRef) => {
           Check
         </button>
       </form>
-      <div
-        style={{
-          textAlign: "center",
-          marginTop: "3rem",
-          marginBottom: "1.5rem",
-          fontSize: "1.3rem",
-        }}
-      >
-        {output}
-      </div>
+      <div className="output-result">{output}</div>
     </div>
   );
 });

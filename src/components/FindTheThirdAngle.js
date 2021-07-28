@@ -84,17 +84,7 @@ const FindTheThirdAngle = forwardRef(({ isShow }, thirdAngleRef) => {
           Play Again
         </button>
       </div>
-      <div
-        style={{
-          textAlign: "center",
-          marginTop: "3rem",
-          marginBottom: "1.5rem",
-          padding: "0rem 1rem",
-          fontSize: "1rem",
-        }}
-      >
-        {output}
-      </div>
+      <div className="output-result">{output}</div>
     </div>
   );
 });

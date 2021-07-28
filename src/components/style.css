@@ -6,6 +6,14 @@
   --output-color: #fff1df;
 }
 
+.output-result {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding: 0rem 1rem;
+  font-size: 1rem;
+}
+
 .is-triangle-div {
   display: flex;
   align-items: center;
@@ -90,7 +98,6 @@
 
 .button-div .check-button:hover {
   background-color: var(--secondary-color);
-  color: white;
 }
 
 .given-angle-div {
@@ -106,6 +113,69 @@
   border-radius: 0.2rem;
 }
 
+.type-angle-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.type-angle-div input {
+  margin: 0rem 0.5rem;
+}
+
+.type-angle-div .check-button {
+  margin: 0rem auto;
+  margin-top: 1.8rem;
+  display: block;
+  font-size: 13.3px;
+  width: 235px;
+  color: white;
+  padding: 0.6rem 2rem;
+  background-color: var(--primary-color);
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+.type-button-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+}
+
+.type-button-div .play-again-button {
+  font-size: 13.3px;
+  width: 235px;
+  color: var(--primary-color);
+  padding: 0.6rem 2rem;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  border: 1px solid var(--dark-green);
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+.type-angle-div .check-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.initial-comp-div {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+}
+
+.initial-comp-div .heading {
+  font-size: 1.5rem;
+  color: var(--dark-green);
+  opacity: 0.5;
+}
+
 @media only screen and (max-width: 520px) {
   .is-triangle-div input {
     margin: 0rem 0.5rem;
@@ -117,5 +187,11 @@
   }
   .button-div .check-button {
     width: 235px;
+  }
+  .type-angle-div label {
+    font-size: 13px;
+  }
+  .initial-comp-div .heading {
+    font-size: 20px;
   }
 }

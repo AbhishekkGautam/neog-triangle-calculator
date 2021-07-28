@@ -35,7 +35,7 @@ const CalculateArea = forwardRef(({ isShow }, areaRef) => {
 
   return (
     <div style={{ display: `${isShow}` }}>
-      <p>Enter base & height of a triangle.</p>
+      <p style={{ textAlign: "center" }}>Enter base & height of a triangle.</p>
       <form className="is-triangle-div" onSubmit={checkBtnHandler}>
         <input
           onChange={inputOneHandler}
@@ -55,16 +55,7 @@ const CalculateArea = forwardRef(({ isShow }, areaRef) => {
           Calculate
         </button>
       </form>
-      <div
-        style={{
-          textAlign: "center",
-          marginTop: "3rem",
-          marginBottom: "1.5rem",
-          fontSize: "1.3rem",
-        }}
-      >
-        {output}
-      </div>
+      <div className="output-result">{output}</div>
     </div>
   );
 });

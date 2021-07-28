@@ -6,8 +6,10 @@ import CalculateArea from "./components/CalculateArea";
 import CalculateHypotenuse from "./components/CalculateHypotenuse";
 import TypesOfTriangleAngle from "./components/TypesOfTriangleAngle";
 import TypesOfTriangleSide from "./components/TypesOfTriangleSide";
+import InitialComponent from "./components/InitialComponent";
 
 function App() {
+  const [showInitialComponent, setShowInitialComponent] = useState("flex");
   const [showIsTriangle, setShowIsTriangle] = useState("none");
   const [showThirdAngle, setShowThirdAngle] = useState("none");
   const [showCalculateArea, setShowCalculateArea] = useState("none");
@@ -19,9 +21,12 @@ function App() {
   const hypotenuseRef = useRef(null);
   const areaRef = useRef(null);
   const thirdAngleRef = useRef(null);
+  const typeAngleRef = useRef(null);
+  const typeSideRef = useRef(null);
 
   const isItATriangleHandler = () => {
     setShowIsTriangle("block");
+    setShowInitialComponent("none");
     setShowThirdAngle("none");
     setShowHypotenuse("none");
     setShowCalculateArea("none");
@@ -31,6 +36,7 @@ function App() {
   };
 
   const thirdAngleHandler = () => {
+    setShowInitialComponent("none");
     setShowIsTriangle("none");
     setShowThirdAngle("block");
     setShowHypotenuse("none");
@@ -42,6 +48,7 @@ function App() {
   };
 
   const hypotenuseHandler = () => {
+    setShowInitialComponent("none");
     setShowIsTriangle("none");
     setShowThirdAngle("none");
     setShowHypotenuse("block");
@@ -52,6 +59,7 @@ function App() {
   };
 
   const areaHandler = () => {
+    setShowInitialComponent("none");
     setShowIsTriangle("none");
     setShowThirdAngle("none");
     setShowHypotenuse("none");
@@ -62,21 +70,27 @@ function App() {
   };
 
   const sideTriangleHandler = () => {
+    setShowInitialComponent("none");
     setShowIsTriangle("none");
     setShowThirdAngle("none");
     setShowHypotenuse("none");
     setShowCalculateArea("none");
     setShowTriangleSide("block");
     setShowTriangleAngle("none");
+    typeSideRef.current.initialStateHandler();
+    typeSideRef.current.randomSideGenerator();
   };
 
   const angleTriangleHandler = () => {
+    setShowInitialComponent("none");
     setShowIsTriangle("none");
     setShowThirdAngle("none");
     setShowHypotenuse("none");
     setShowCalculateArea("none");
     setShowTriangleSide("none");
     setShowTriangleAngle("block");
+    typeAngleRef.current.initialStateHandler();
+    typeAngleRef.current.randomAngleGenerator();
   };
 
   return (
@@ -105,13 +119,17 @@ function App() {
             Types of △ (angle)
           </button>
           <div className="outputDiv">
-            {/* TODO - all components */}
+            {/* all components */}
+            <InitialComponent isShow={showInitialComponent} />
             <IsItATriangle isShow={showIsTriangle} ref={isTriangleRef} />
             <FindTheThirdAngle isShow={showThirdAngle} ref={thirdAngleRef} />
             <CalculateHypotenuse isShow={showHypotenuse} ref={hypotenuseRef} />
             <CalculateArea isShow={showCalculateArea} ref={areaRef} />
-            <TypesOfTriangleSide isShow={showTriangleSide} />
-            <TypesOfTriangleAngle isShow={showTriangleAngle} />
+            <TypesOfTriangleSide isShow={showTriangleSide} ref={typeSideRef} />
+            <TypesOfTriangleAngle
+              isShow={showTriangleAngle}
+              ref={typeAngleRef}
+            />
           </div>
           <div className="footer">
             <p>
