@@ -17,10 +17,14 @@ const CalculateHypotenuse = forwardRef(({ isShow }, hypotenuseRef) => {
     e.preventDefault();
     let squareOfBase = Number(base) * Number(base);
     let squareOfHeight = Number(height) * Number(height);
-    let result = Math.sqrt(squareOfBase + squareOfHeight).toFixed(2);
-    setOutput(
-      `Hypotenuse of this triangle with base ${base} units and height ${height} units is ${result} units.`
-    );
+    if (base > 0 && height > 0) {
+      let result = Math.sqrt(squareOfBase + squareOfHeight).toFixed(2);
+      setOutput(
+        `Hypotenuse of this triangle with base ${base} units and height ${height} units is ${result} units.`
+      );
+    } else {
+      setOutput("Values must be greater than 0.");
+    }
   };
 
   const initialStateHandler = () => {
