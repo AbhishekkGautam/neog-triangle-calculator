@@ -15,10 +15,14 @@ const CalculateArea = forwardRef(({ isShow }, areaRef) => {
 
   const checkBtnHandler = (e) => {
     e.preventDefault();
-    let result = (0.5 * base * height).toFixed(2);
-    setOutput(
-      `Area of this triangle with base ${base} units and height ${height} units is ${result} sq units.`
-    );
+    if (base > 0 && height > 0) {
+      let result = (0.5 * base * height).toFixed(2);
+      setOutput(
+        `Area of this triangle with base ${base} units and height ${height} units is ${result} sq units.`
+      );
+    } else {
+      setOutput("Values must be greater than 0.");
+    }
   };
 
   const initialStateHandler = () => {
